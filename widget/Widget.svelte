@@ -94,18 +94,16 @@
 {#if !error}
   <div class:dark={theme === 'dark'}>
     {#if message}
-      <div class="p-2 mb-4 bg-blue-500 text-white">
+      <div class="cmts-notification p-2 mb-4 bg-blue-500 text-white">
         {message}
       </div>
     {/if}
-
-    <Reply />
 
     <div class="my-8" />
 
     <div class="mt-4 px-1">
       {#if loadingComments}
-        <div class="text-gray-900 dark:text-gray-100">
+        <div class="cmts-loading text-gray-900 dark:text-gray-100">
           {t('loading')}...
         </div>
       {:else}
@@ -126,9 +124,12 @@
       {/if}
     </div>
 
-    <div class="my-8" />
 
-    <div class="text-center text-gray-500 dark:text-gray-100 text-xs">
+    <Reply />
+
+    <div class="cmts-footer my-8" />
+
+    <div class="cmts-powered text-center text-gray-500 dark:text-gray-100 text-xs">
       <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
     </div>
   </div>

@@ -59,21 +59,21 @@
 
 <div class="grid grid-cols-1 gap-4">
   <div class="grid grid-cols-2 gap-4">
-    <div class="px-1">
+    <div class="cmt-name px-1">
       <label class="mb-2 block dark:text-gray-200" for="nickname">{t('nickname')}</label>
       <input
         name="nickname"
-        class="w-full p-2 border border-gray-200 bg-transparent dark:text-gray-100 dark:outline-none"
+        class="cmt-input w-full p-2"
         type="text"
         title={t('nickname')}
         bind:value={nickname}
       />
     </div>
-    <div class="px-1">
+    <div class="cmt-email px-1">
       <label class="mb-2 block dark:text-gray-200" for="email">{t('email')}</label>
       <input
         name="email"
-        class="w-full p-2 border border-gray-200 bg-transparent  dark:text-gray-100 dark:outline-none"
+        class="cmt-input w-full p-2"
         type="email"
         title={t('email')}
         bind:value={email}
@@ -81,11 +81,11 @@
     </div>
   </div>
 
-  <div class="px-1">
+  <div class="cmt-reply px-1">
     <label class="mb-2 block dark:text-gray-200" for="reply_content">{t('reply_placeholder')}</label>
     <textarea
       name="reply_content"
-      class="w-full p-2 border border-gray-200 h-24 bg-transparent dark:text-gray-100 dark:outline-none"
+      class="cmt-input w-full p-2  h-24"
       title={t('reply_placeholder')}
       bind:value={content}
     />
@@ -94,7 +94,7 @@
   <div class="px-1">
     <button
 
-      class="text-sm bg-gray-200 p-2 px-4 font-bold dark:bg-transparent dark:border dark:border-gray-100"
+      class="cmt-post-btn"
       class:cusdis-disabled={loading}
       on:click={addComment}>{loading ? t('sending') : t('post_comment')}</button
     >

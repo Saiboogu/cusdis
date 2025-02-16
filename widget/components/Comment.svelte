@@ -18,23 +18,24 @@
   class:border-color-gray-200={isChild}
   class:cusdis-indicator={showIndicator}
 >
-  <div class="flex items-center">
-    <div class="mr-2 font-medium dark:text-gray-100">
+  <div class="cmt-author-line flex items-center">
+    <div class="cmt-author mr-2 font-medium dark:text-gray-100">
       {comment.moderator && comment.moderator.displayName ? comment.moderator.displayName : comment.by_nickname}
     </div>
 
     {#if comment.moderatorId}
-      <div class="mr-2 dark:bg-gray-500 bg-gray-200 text-xs py-0.5 px-1 rounded dark:text-gray-100">
+      <div class="cmt-mod mr-2 dark:bg-gray-500 bg-gray-200 text-xs dark:text-gray-100">
         <span>{t('mod_badge')}</span>
       </div>
     {/if}
+    <div class="cmt-date text-gray-500 text-sm dark:text-gray-400">
+      {comment.parsedCreatedAt}
+    </div>
   </div>
 
-  <div class="text-gray-500 text-sm dark:text-gray-400">
-    {comment.parsedCreatedAt}
-  </div>
 
-  <div class="text-gray-500 my-2 dark:text-gray-200">
+
+  <div class="cmt-message text-gray-500 my-2 dark:text-gray-200">
     {@html comment.parsedContent}
   </div>
 
@@ -46,7 +47,7 @@
 
   <div>
     <button
-      class="font-medium text-sm text-gray-500 dark:bg-transparent dark:text-gray-100"
+      class="cmt-reply-btn"
       type="button"
       on:click={(_) => {
         showReplyForm = !showReplyForm
@@ -56,7 +57,7 @@
 
 
   {#if showReplyForm}
-    <div class="mt-4 pl-4 border-l-2 border-gray-200">
+    <div class="cmt-reply-form mt-4 pl-4 border-gray-200">
       <Reply
         parentId={comment.id}
         onSuccess={() => {

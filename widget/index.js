@@ -1,5 +1,6 @@
 window.CUSDIS = {}
 
+
 const makeIframeContent = (target) => {
   const host = target.dataset.host || 'https://cusdis.com'
   const iframeJsPath = target.dataset.iframe || `${host}/js/iframe.umd.js`
@@ -8,6 +9,7 @@ const makeIframeContent = (target) => {
 <html>
   <head>
     <link rel="stylesheet" href="${cssPath}">
+    <link rel="stylesheet" href="https://cyberia.robeson.me/css/main.css">
     <base target="_parent" />
     <link>
     <script>
@@ -37,7 +39,9 @@ function createIframe(target) {
   }
   // srcdoc dosen't work on IE11
   singleTonIframe.srcdoc = makeIframeContent(target)
+  singleTonIframe.id = 'cusdis-frame'
   singleTonIframe.style.width = '100%'
+  singleTonIframe.style.height = '650px'
   singleTonIframe.style.border = '0'
 
   return singleTonIframe

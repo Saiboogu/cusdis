@@ -30,6 +30,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.11.0",
     "@hapi/boom": "^9.1.2",
+    "@iframe-resizer/parent": "^5.3.3",
     "@mantine/core": "^6.0.16",
     "@mantine/form": "^6.0.16",
     "@mantine/hooks": "^6.0.16",
