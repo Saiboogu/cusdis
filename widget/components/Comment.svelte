@@ -19,23 +19,23 @@
   class:cusdis-indicator={showIndicator}
 >
   <div class="cmt-author-line flex items-center">
-    <div class="cmt-author mr-2 font-medium dark:text-gray-100">
+    <div class="cmt-author mr-2">
       {comment.moderator && comment.moderator.displayName ? comment.moderator.displayName : comment.by_nickname}
     </div>
 
     {#if comment.moderatorId}
-      <div class="cmt-mod mr-2 dark:bg-gray-500 bg-gray-200 text-xs dark:text-gray-100">
+      <div class="cmt-mod mr-2">
         <span>{t('mod_badge')}</span>
       </div>
     {/if}
-    <div class="cmt-date text-gray-500 text-sm dark:text-gray-400">
+    <div class="cmt-date">
       {comment.parsedCreatedAt}
     </div>
   </div>
 
 
 
-  <div class="cmt-message text-gray-500 my-2 dark:text-gray-200">
+  <div class="cmt-message my-2">
     {@html comment.parsedContent}
   </div>
 
@@ -57,7 +57,7 @@
 
 
   {#if showReplyForm}
-    <div class="cmt-reply-form mt-4 pl-4 border-gray-200">
+    <div class="cmt-reply-form mt-4 pl-4">
       <Reply
         parentId={comment.id}
         onSuccess={() => {
