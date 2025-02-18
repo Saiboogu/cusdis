@@ -60,7 +60,7 @@
 <div class="grid grid-cols-1 gap-4">
   <div class="grid grid-cols-2 gap-4">
     <div class="cmt-name px-1">
-      <label class="mb-2 block dark:text-gray-200" for="nickname">{t('nickname')}</label>
+      <label class="mb-2 block cmt-required-star" for="nickname">{t('nickname')}</label>
       <input
         name="nickname"
         class="cmt-input w-full p-2"
@@ -70,7 +70,7 @@
       />
     </div>
     <div class="cmt-email px-1">
-      <label class="mb-2 block dark:text-gray-200" for="email">{t('email')}</label>
+      <label class="mb-2 block" for="email">{t('email')}</label>
       <input
         name="email"
         class="cmt-input w-full p-2"
@@ -82,7 +82,9 @@
   </div>
 
   <div class="cmt-reply px-1">
-    <label class="mb-2 block dark:text-gray-200" for="reply_content">{t('reply_placeholder')}</label>
+
+    <label class="cmt-required-warn cmt-required-star" for="reply_content">{t('reply_required')}</label>
+    <label class="mb-2 block cmt-required-star" for="reply_content">{t('reply_placeholder')}</label>
     <textarea
       name="reply_content"
       class="cmt-input w-full p-2  h-24"

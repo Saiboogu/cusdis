@@ -125,8 +125,8 @@
 
     <Reply />
 
-    <div class="cmts-footer cmts-powered text-center">
-      <a class="underline " href="https://cusdis.com">{t('powered_by')}</a>
+    <div class="powered">
+      <a href="https://cusdis.com">{t('powered_by')}</a>
     </div>
   </div>
 {/if}
